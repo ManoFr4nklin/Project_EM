@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Alunos</title>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+  <h1>Cadastro de Alunos</h1>
+
+  <form id="cadastroForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="email">CPF:</label>
+    <input type="text" id="CPF" name="CPF" required>
+
+    <label for="email">Data de nascimento:</label>
+    <input type="datetime" id="nasc" name="nasc" required>
+
+    <select name="time">
+      <option value="bota">Botafogo</option>
+      <option value="fla">Flamengo</option>
+      <option value="flu">Fluminense</option>
+      <option value="vasco">Vasco da Gama</option>
+      </select>
+      
+    <datalist id="modalidade">
+      <option value="">Modalidade praticada :</option>
+      <option value="thai">Muay Thai</option>
+      <option value="kbx">Kickboxing</option>
+      <option value="jiu">Jiu-Jitsu</option>
+    </datalist>
+
+  <datalist id="afinidade">
+    <option value="">Afinidade :</option>
+    <option value="aluno">Aluno</option>
+    <option value="atleta">Atleta</option>
+   
+  </datalist>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script src="cadastro.js"></script>
+</body>
+
+</html>
