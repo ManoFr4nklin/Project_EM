@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Alunos</title>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+  <header>
+    <div class="menu-toggle">☰</div>
+    <img src="../logo_KruManager-removebg-preview.png" alt="" srcset="">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cadastro</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Cadastro de Alunos</h1>
+
+  <form id="cadastroForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" id="CPF" name="CPF" required>
+
+    <label for="datanasc">Data de nascimento:</label>
+    <input type="datetime" id="nasc" name="nasc" required>
+
+    <label for="mdl">Modalidade praticada:</label>
+    <input type="text" id="mdl" name="modalidade" required>
+
+    <div class="select-container">
+
+      <div>
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo" required>
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="afinidade">Afinidade</label>
+        <select id="afn" name="afn" required>
+          <option value="A">Aluno</option>
+          <option value="Atl">Atleta</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="saude">O aluno possui algo que comprometa a saúde e os treinos ?</label>
+        <select id="sud" name="sud" required>
+          <option value="nps">Não possui</option>
+          <option value="dnch">Possui doença hereditária (ex: Asma, diabetes)</option>
+          <option value="crg">Passou por cirurgia</option>
+          <option value="crg">Possui doença cardíaca/respiratória</option>
+          <option value="crg">Possui problemas articulares (ex:luxação,subluxação,artrite)</option>
+        </select>
+      </div>
+      
+    </div>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script src="cadastro.js"></script>
+</body>
+
+</html>

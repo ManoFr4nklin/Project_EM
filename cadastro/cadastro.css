@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+    
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .select-container {
+    display: flex;
+    gap: 80px; /* Espaço entre os selects */
+    padding-bottom: 50px;
+    font-family: Arial, sans-serif;
+  }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+nav {
+  display: flex;
+  transition: max-height 0.3s ease-in-out; /* Add transition for smooth animation */
+  max-height: none; /* Ensure the menu is visible by default */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+nav.open {
+  max-height: 500px; /* Adjust based on the content height */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 40px; /* Increase the space between menu items */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu toggle on small screens */
+  }
+
+  nav {
+    display: none; /* Hide the navigation by default on small screens */
+    max-height: 0; /* Initially hide the menu */
+  }
+
+  nav.open {
+    display: flex; /* Show the navigation when open */
+    max-height: 500px; /* Adjust based on the content height */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 20px 0; /* Increase the space between menu items on small screens */
+    text-align: center;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .select-container {
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap for smaller screens */
+  }
+
+  label, input, select {
+    width: 100%;
+  }
+}
+
